@@ -1,0 +1,434 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@import url("https://use.typekit.net/dtz0uat.css");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+/* //keep */
+@import url("https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500&display=swap");
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+h1 {
+  margin-bottom: 2rem;
+}
+
+h1,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+article,
+span {
+  font-family: "Bely", serif !important;
+}
+
+p {
+  margin-bottom: 1.2rem;
+}
+
+a {
+  color: #fff;
+}
+
+#main-header {
+  min-height: 90vh;
+  background: url("./assets/apm-bg.png"), rgba(64, 29, 29, 1);
+  background-size: cover;
+  object-fit: cover;
+  position: relative;
+}
+
+.container {
+  padding: 80px 232px;
+
+  position: relative;
+}
+
+.nav.mobile {
+  display: none;
+  cursor: pointer;
+  z-index: 999999;
+}
+
+.nav-links.mobile {
+  transform: translateY(-150%);
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0%;
+  bottom: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1a1818;
+  z-index: 9999;
+  transition: all 0.2s ease-in-out;
+  justify-content: space-around;
+  padding-top: 125px;
+  opacity: 0;
+}
+
+.nav-links.mobile li {
+  margin: 0px;
+}
+
+.nav-links.mobile.toggled {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.bun {
+  width: 30px;
+  height: 2px;
+  background-color: #fff;
+  display: block;
+  border: none;
+  margin: 6px 0px;
+  transition: all 0.2s ease-in-out;
+}
+
+.bun.hidden {
+  opacity: 0;
+  transform: translateX(-10px);
+}
+
+.bun.toggled:first-child {
+  transform: translate(0, 8px) rotate(-45deg);
+}
+
+.bun.toggled:last-child {
+  transform: translate(0, -8px) rotate(45deg);
+}
+
+@media screen and (max-width: 1700px) {
+  .container {
+    padding: 80px 270px;
+  }
+  nav ul {
+    margin-right: 60px;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .container {
+    padding: 80px 130px;
+  }
+  nav ul {
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    padding: 80px 100px;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .nav-links.desktop {
+    display: none;
+  }
+
+  .nav.mobile {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .container {
+    padding: 80px 50px;
+  }
+  .col img {
+    max-height: 250px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    padding: 80px 20px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    padding: 60px 10px;
+  }
+}
+
+.flex {
+  display: flex;
+}
+
+.a-items-center {
+  align-items: center;
+}
+
+.j-content-center {
+  justify-content: center;
+}
+
+.j-content-between {
+  justify-content: space-between;
+}
+
+.r-reverse {
+  flex-direction: row-reverse;
+}
+
+nav {
+  position: absolute;
+
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 83.5%;
+  padding: 14px 0px;
+}
+
+nav ul {
+  text-decoration: none;
+  list-style: none;
+  display: flex;
+  margin-left: auto;
+  color: #fff;
+  font-family: "bely", serif;
+
+  font-weight: 400;
+
+  font-style: normal;
+}
+
+nav ul li {
+  margin: 1.5rem;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+nav ul li:nth-child(4) {
+  margin-left: 35px;
+}
+
+nav ul li:last-child {
+  margin-left: 39px;
+}
+
+.logo {
+  padding: 15px 10px;
+  width: 130px;
+  height: 130px;
+  background-color: rgb(25, 25, 25);
+  color: #fff;
+  z-index: 99999;
+  color: #fff;
+}
+
+.logo h2 {
+  font-size: 29px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+
+h2.mops {
+  font-weight: 600 !important;
+}
+
+.l-hero {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 10rem 0rem 7rem 0rem;
+}
+
+.l-hero h1 {
+  font-size: 45px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.l-hero p {
+  color: #fff;
+  font-weight: 400;
+  font-size: 20px;
+  margin-bottom: 1.5rem;
+}
+
+.l-hero a {
+  font-size: 25px;
+}
+
+.lp-content {
+  padding: 15px 0px;
+}
+
+.row {
+  text-align: center;
+  width: 100%;
+}
+
+.row.flex {
+  margin-bottom: 40px;
+}
+
+.col {
+  width: 50%;
+  min-width: 350px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  justify-content: center;
+}
+
+.mr-25 {
+  margin-right: 25px;
+}
+
+.ml-25 {
+  margin-left: 25px;
+}
+
+.col h1 {
+  margin-bottom: 1rem;
+  color: #5a5a5a;
+}
+
+.col p {
+  font-size: 18px;
+  color: #5a5a5a;
+}
+
+.col a {
+  color: #5a5a5a;
+}
+
+.col.img {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  position: relative;
+}
+
+.col img {
+  width: 100%;
+  height: 100%;
+}
+
+.play-vid {
+  position: absolute;
+  top: 40%;
+}
+
+.play-vid img {
+  max-height: 50px;
+  max-width: 50px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 830px) {
+  .row {
+    text-align: left;
+  }
+  .row.flex {
+    flex-direction: column;
+  }
+
+  .lp-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .col {
+    width: 100%;
+  }
+
+  .col.img {
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1.5rem 0rem;
+  }
+
+  .row .col.ml-25 {
+    margin-left: 0px;
+  }
+
+  .col.img img:not(.play-vid img) {
+    min-height: 250px;
+    height: 100%;
+    max-width: 60%;
+    min-width: 350px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .col {
+    min-width: 0;
+  }
+  .col.img {
+    height: 30%;
+
+    margin: 1.5rem 0rem;
+  }
+  .col.img img:not(.play-vid img) {
+    min-height: 150px;
+    height: 100%;
+    max-width: 60%;
+    min-width: 300px;
+  }
+}
+
+footer {
+  background-color: #1a1818;
+  height: 266.83px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  min-width: 18%;
+}
+
+footer .logo {
+  background: #fff;
+  color: #1a1818;
+  width: 110px;
+  height: 110px;
+  padding: 13px 10px;
+}
+
+footer .logo h2 {
+  font-size: 25px;
+}
+
+.connect {
+  margin-left: 2rem;
+}
+
+.connect p:not(:last-child) {
+  margin-bottom: 0;
+  margin-top: 1.5rem;
+}
+
+.connect table {
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.connect table td {
+  min-width: 80px;
+}
