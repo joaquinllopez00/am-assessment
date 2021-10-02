@@ -263,10 +263,8 @@ nav ul li:last-child {
 }
 
 .logo {
-  padding: 15px 10px;
   width: 130px;
   height: 130px;
-  background-color: rgb(25, 25, 25);
   color: #fff;
   z-index: 99999;
   color: #fff;
@@ -437,15 +435,13 @@ footer {
 .footer-content {
   display: flex;
   justify-content: space-between;
-  min-width: 270px;
+  width: 95%;
+  max-width: 300px;
 }
 
-footer .logo {
-  background: #fff;
-  color: #1a1818;
-  width: 110px;
-  height: 110px;
-  padding: 13px 10px;
+footer .logo svg {
+  fill: #fff;
+  margin-right: 1rem;
 }
 
 footer .logo h2 {
@@ -476,7 +472,7 @@ footer .logo h2 {
 }
 
 .copyright {
-  margin-top: 20px;
+  margin-top: 30px;
   margin-bottom: 0px;
 }
 
