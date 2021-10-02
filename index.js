@@ -82,11 +82,4 @@ function app() {
   handleResize();
 }
 
-window.onunload = function () {
-  const vidContainer = document.querySelector(".vid-player");
-  const vid = document.querySelector(".vid-player iframe");
-
-  vidContainer.removeEventListener("click", vidContainerClick);
-};
-
 app();
