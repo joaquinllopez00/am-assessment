@@ -3,17 +3,17 @@
 //handles resize + toggles classes for mobile nav
 const handleResize = () => {
   let mobileNavLinks = document.querySelector(".nav-links");
-  if (window.innerWidth < 1150 && !mobileNavLinks.classList[2]) {
+  if (window.innerWidth < 1150 && mobileNavLinks.classList[1] !== "mobile") {
     mobileNavLinks.classList.remove("desktop");
     mobileNavLinks.classList.add("mobile");
-  } else if (window.innerWidth > 1150 && mobileNavLinks.classList[1] === "mobile") {
+  } else if (window.innerWidth > 1150 && mobileNavLinks.classList.contains("mobile")) {
     mobileNavLinks.classList.remove("mobile");
     mobileNavLinks.classList.add("desktop");
   }
 };
 
 //function to apply src on supplied element based on src provided
-//Default sets src back to empty string to keep videos from playing when hidden
+//Default case sets src back to empty string to keep videos from playing when hidden
 //Default source param falls to default so function can be called to set src back to an empty string
 const handleSrc = (el, source = "") => {
   switch (source) {
