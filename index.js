@@ -3,6 +3,7 @@
 //handles resize + toggles classes for mobile nav
 const handleResize = () => {
   let mobileNavLinks = document.querySelector(".nav-links");
+
   if (window.innerWidth < 1150 && mobileNavLinks.classList[1] !== "mobile") {
     mobileNavLinks.classList.remove("desktop");
     mobileNavLinks.classList.add("mobile");
@@ -57,6 +58,9 @@ const handleNavToggle = () => {
   navLines[2].classList.toggle("toggled");
 
   navLinks.classList.toggle("toggled");
+  navLinks.classList.contains("toggled") && navLinks.classList.contains("mobile") && window.innerWidth < 800
+    ? (document.body.style.overflowY = "hidden")
+    : (document.body.style.overflowY = "scroll");
 };
 
 const vidContainerClick = (e) => {
